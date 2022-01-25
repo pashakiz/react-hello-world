@@ -90,10 +90,7 @@ const babelOptions = preset => {
 module.exports = {
   mode: isProd ? 'production' : 'development',
   target: isProd ? 'browserslist' : 'web',
-  entry: [
-    '@babel/polyfill',
-    './src/js/index.js'
-  ],
+  entry: path.resolve(__dirname, './src/js/index.js'),
   output: {
     filename: 'assets/js/' + filename('js'),
     path: path.resolve(__dirname, 'dist'),
